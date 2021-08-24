@@ -155,10 +155,10 @@ if(product_id!=""){
 await productContract.methods.getProduct(product_id).call().then(data=>{
   productData=data;
 
-  if(data.[0]){
+  if(data[0]){
   var productSpecification=`Product Id is ${data[0]}.Product Name is${data[1]}This product is Made By ${data[2]}.And bought by ${data[3]}. And This Product is REAL Note Fake.`
   document.getElementById("qrcode").innerHTML="";
-  new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+  new QRCode(document.getElementById("qrcode"), productSpecification);
   myModal.show();
   }else{
     document.getElementById("qrcode").innerHTML="";
