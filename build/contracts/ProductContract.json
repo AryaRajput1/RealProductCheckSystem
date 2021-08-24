@@ -1,0 +1,2715 @@
+{
+  "contractName": "ProductContract",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "id",
+          "type": "string"
+        }
+      ],
+      "name": "getProduct",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "pn",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "co",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "po",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "pd",
+          "type": "string"
+        }
+      ],
+      "name": "setProduct",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "name": "setProductOwnerName",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"string\",\"name\":\"id\",\"type\":\"string\"}],\"name\":\"getProduct\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"id\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"pn\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"co\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"po\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"pd\",\"type\":\"string\"}],\"name\":\"setProduct\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"id\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"setProductOwnerName\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ProductContract.sol\":\"ProductContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ProductContract.sol\":{\"keccak256\":\"0x31f010583b719c7ee3c17d4058d078d4cbcd15cc4fcb5134c60d00811045c850\",\"urls\":[\"bzz-raw://765f654485f38d76a2b55fceec858a2b49c11ce78cab049ad4c4316dccdfc7cb\",\"dweb:/ipfs/QmXs6wxGVaEM42rJfBdpE7zZMjMGfnn5QVBwSjBvvc9wqD\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610aba806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806322a1a4491461004657806368111cce14610062578063bca5944914610096575b600080fd5b610060600480360361005b91908101906107be565b6100b2565b005b61007c60048036036100779190810190610711565b610192565b60405161008d95949392919061092e565b60405180910390f35b6100b060048036036100ab9190810190610752565b61055e565b005b6040518060a00160405280858152602001868152602001848152602001838152602001828152506000866040516100e99190610917565b90815260200160405180910390206000820151816000019080519060200190610113929190610598565b506020820151816001019080519060200190610130929190610598565b50604082015181600201908051906020019061014d929190610598565b50606082015181600301908051906020019061016a929190610598565b506080820151816004019080519060200190610187929190610598565b509050505050505050565b60608060608060606000866040516101aa9190610917565b90815260200160405180910390206000016000876040516101cb9190610917565b90815260200160405180910390206001016000886040516101ec9190610917565b908152602001604051809103902060020160008960405161020d9190610917565b908152602001604051809103902060030160008a60405161022e9190610917565b9081526020016040518091039020600401848054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102d45780601f106102a9576101008083540402835291602001916102d4565b820191906000526020600020905b8154815290600101906020018083116102b757829003601f168201915b50505050509450838054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103705780601f1061034557610100808354040283529160200191610370565b820191906000526020600020905b81548152906001019060200180831161035357829003601f168201915b50505050509350828054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561040c5780601f106103e15761010080835404028352916020019161040c565b820191906000526020600020905b8154815290600101906020018083116103ef57829003601f168201915b50505050509250818054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104a85780601f1061047d576101008083540402835291602001916104a8565b820191906000526020600020905b81548152906001019060200180831161048b57829003601f168201915b50505050509150808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105445780601f1061051957610100808354040283529160200191610544565b820191906000526020600020905b81548152906001019060200180831161052757829003601f168201915b505050505090509450945094509450945091939590929450565b8060008360405161056f9190610917565b90815260200160405180910390206003019080519060200190610593929190610618565b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105d957805160ff1916838001178555610607565b82800160010185558215610607579182015b828111156106065782518255916020019190600101906105eb565b5b5090506106149190610698565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061065957805160ff1916838001178555610687565b82800160010185558215610687579182015b8281111561068657825182559160200191906001019061066b565b5b5090506106949190610698565b5090565b6106ba91905b808211156106b657600081600090555060010161069e565b5090565b90565b600082601f8301126106ce57600080fd5b81356106e16106dc826109d1565b6109a4565b915080825260208301602083018583830111156106fd57600080fd5b610708838284610a24565b50505092915050565b60006020828403121561072357600080fd5b600082013567ffffffffffffffff81111561073d57600080fd5b610749848285016106bd565b91505092915050565b6000806040838503121561076557600080fd5b600083013567ffffffffffffffff81111561077f57600080fd5b61078b858286016106bd565b925050602083013567ffffffffffffffff8111156107a857600080fd5b6107b4858286016106bd565b9150509250929050565b600080600080600060a086880312156107d657600080fd5b600086013567ffffffffffffffff8111156107f057600080fd5b6107fc888289016106bd565b955050602086013567ffffffffffffffff81111561081957600080fd5b610825888289016106bd565b945050604086013567ffffffffffffffff81111561084257600080fd5b61084e888289016106bd565b935050606086013567ffffffffffffffff81111561086b57600080fd5b610877888289016106bd565b925050608086013567ffffffffffffffff81111561089457600080fd5b6108a0888289016106bd565b9150509295509295909350565b60006108b8826109fd565b6108c28185610a08565b93506108d2818560208601610a33565b6108db81610a66565b840191505092915050565b60006108f1826109fd565b6108fb8185610a19565b935061090b818560208601610a33565b80840191505092915050565b600061092382846108e6565b915081905092915050565b600060a082019050818103600083015261094881886108ad565b9050818103602083015261095c81876108ad565b9050818103604083015261097081866108ad565b9050818103606083015261098481856108ad565b9050818103608083015261099881846108ad565b90509695505050505050565b6000604051905081810181811067ffffffffffffffff821117156109c757600080fd5b8060405250919050565b600067ffffffffffffffff8211156109e857600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600081905092915050565b82818337600083830152505050565b60005b83811015610a51578082015181840152602081019050610a36565b83811115610a60576000848401525b50505050565b6000601f19601f830116905091905056fea365627a7a723158207987dcd3d3eeea032a8bffba6bd847fde854d3ca232f81fefe1dd69a5184effe6c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806322a1a4491461004657806368111cce14610062578063bca5944914610096575b600080fd5b610060600480360361005b91908101906107be565b6100b2565b005b61007c60048036036100779190810190610711565b610192565b60405161008d95949392919061092e565b60405180910390f35b6100b060048036036100ab9190810190610752565b61055e565b005b6040518060a00160405280858152602001868152602001848152602001838152602001828152506000866040516100e99190610917565b90815260200160405180910390206000820151816000019080519060200190610113929190610598565b506020820151816001019080519060200190610130929190610598565b50604082015181600201908051906020019061014d929190610598565b50606082015181600301908051906020019061016a929190610598565b506080820151816004019080519060200190610187929190610598565b509050505050505050565b60608060608060606000866040516101aa9190610917565b90815260200160405180910390206000016000876040516101cb9190610917565b90815260200160405180910390206001016000886040516101ec9190610917565b908152602001604051809103902060020160008960405161020d9190610917565b908152602001604051809103902060030160008a60405161022e9190610917565b9081526020016040518091039020600401848054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102d45780601f106102a9576101008083540402835291602001916102d4565b820191906000526020600020905b8154815290600101906020018083116102b757829003601f168201915b50505050509450838054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103705780601f1061034557610100808354040283529160200191610370565b820191906000526020600020905b81548152906001019060200180831161035357829003601f168201915b50505050509350828054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561040c5780601f106103e15761010080835404028352916020019161040c565b820191906000526020600020905b8154815290600101906020018083116103ef57829003601f168201915b50505050509250818054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104a85780601f1061047d576101008083540402835291602001916104a8565b820191906000526020600020905b81548152906001019060200180831161048b57829003601f168201915b50505050509150808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105445780601f1061051957610100808354040283529160200191610544565b820191906000526020600020905b81548152906001019060200180831161052757829003601f168201915b505050505090509450945094509450945091939590929450565b8060008360405161056f9190610917565b90815260200160405180910390206003019080519060200190610593929190610618565b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105d957805160ff1916838001178555610607565b82800160010185558215610607579182015b828111156106065782518255916020019190600101906105eb565b5b5090506106149190610698565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061065957805160ff1916838001178555610687565b82800160010185558215610687579182015b8281111561068657825182559160200191906001019061066b565b5b5090506106949190610698565b5090565b6106ba91905b808211156106b657600081600090555060010161069e565b5090565b90565b600082601f8301126106ce57600080fd5b81356106e16106dc826109d1565b6109a4565b915080825260208301602083018583830111156106fd57600080fd5b610708838284610a24565b50505092915050565b60006020828403121561072357600080fd5b600082013567ffffffffffffffff81111561073d57600080fd5b610749848285016106bd565b91505092915050565b6000806040838503121561076557600080fd5b600083013567ffffffffffffffff81111561077f57600080fd5b61078b858286016106bd565b925050602083013567ffffffffffffffff8111156107a857600080fd5b6107b4858286016106bd565b9150509250929050565b600080600080600060a086880312156107d657600080fd5b600086013567ffffffffffffffff8111156107f057600080fd5b6107fc888289016106bd565b955050602086013567ffffffffffffffff81111561081957600080fd5b610825888289016106bd565b945050604086013567ffffffffffffffff81111561084257600080fd5b61084e888289016106bd565b935050606086013567ffffffffffffffff81111561086b57600080fd5b610877888289016106bd565b925050608086013567ffffffffffffffff81111561089457600080fd5b6108a0888289016106bd565b9150509295509295909350565b60006108b8826109fd565b6108c28185610a08565b93506108d2818560208601610a33565b6108db81610a66565b840191505092915050565b60006108f1826109fd565b6108fb8185610a19565b935061090b818560208601610a33565b80840191505092915050565b600061092382846108e6565b915081905092915050565b600060a082019050818103600083015261094881886108ad565b9050818103602083015261095c81876108ad565b9050818103604083015261097081866108ad565b9050818103606083015261098481856108ad565b9050818103608083015261099881846108ad565b90509695505050505050565b6000604051905081810181811067ffffffffffffffff821117156109c757600080fd5b8060405250919050565b600067ffffffffffffffff8211156109e857600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600081905092915050565b82818337600083830152505050565b60005b83811015610a51578082015181840152602081019050610a36565b83811115610a60576000848401525b50505050565b6000601f19601f830116905091905056fea365627a7a723158207987dcd3d3eeea032a8bffba6bd847fde854d3ca232f81fefe1dd69a5184effe6c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "99:858:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;99:858:1;;;;;;;",
+  "deployedSourceMap": "99:858:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;99:858:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;655:168;;;;;;;;;;;;;;;;:::i;:::-;;366:277;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;835:118;;;;;;;;;;;;;;;;:::i;:::-;;655:168;792:23;;;;;;;;800:2;792:23;;;;803:2;792:23;;;;806:2;792:23;;;;809:2;792:23;;;;812:2;792:23;;;785:2;788;785:6;;;;;;;;;;;;;;;;;;;;:30;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;655:168;;;;;:::o;366:277::-;424:13;438;452;466;480;523:2;526;523:6;;;;;;;;;;;;;;;;;;;;:19;;543:2;546;543:6;;;;;;;;;;;;;;;;;;;;:17;;561:2;564;561:6;;;;;;;;;;;;;;;;;;;;:20;;582:2;585;582:6;;;;;;;;;;;;;;;;;;;;:20;;603:2;606;603:6;;;;;;;;;;;;;;;;;;;;:21;;515:110;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;366:277;;;;;;;:::o;835:118::-;940:5;919:2;922;919:6;;;;;;;;;;;;;;;;;;;;:20;;:26;;;;;;;;;;;;:::i;:::-;;835:118;;:::o;99:858::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;6:442:-1:-;;108:3;101:4;93:6;89:17;85:27;75:2;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:347;;570:2;558:9;549:7;545:23;541:32;538:2;;;586:1;583;576:12;538:2;649:1;638:9;634:17;621:31;672:18;664:6;661:30;658:2;;;704:1;701;694:12;658:2;724:63;779:7;770:6;759:9;755:22;724:63;;;714:73;;600:193;532:271;;;;;810:578;;;951:2;939:9;930:7;926:23;922:32;919:2;;;967:1;964;957:12;919:2;1030:1;1019:9;1015:17;1002:31;1053:18;1045:6;1042:30;1039:2;;;1085:1;1082;1075:12;1039:2;1105:63;1160:7;1151:6;1140:9;1136:22;1105:63;;;1095:73;;981:193;1233:2;1222:9;1218:18;1205:32;1257:18;1249:6;1246:30;1243:2;;;1289:1;1286;1279:12;1243:2;1309:63;1364:7;1355:6;1344:9;1340:22;1309:63;;;1299:73;;1184:194;913:475;;;;;;1395:1273;;;;;;1617:3;1605:9;1596:7;1592:23;1588:33;1585:2;;;1634:1;1631;1624:12;1585:2;1697:1;1686:9;1682:17;1669:31;1720:18;1712:6;1709:30;1706:2;;;1752:1;1749;1742:12;1706:2;1772:63;1827:7;1818:6;1807:9;1803:22;1772:63;;;1762:73;;1648:193;1900:2;1889:9;1885:18;1872:32;1924:18;1916:6;1913:30;1910:2;;;1956:1;1953;1946:12;1910:2;1976:63;2031:7;2022:6;2011:9;2007:22;1976:63;;;1966:73;;1851:194;2104:2;2093:9;2089:18;2076:32;2128:18;2120:6;2117:30;2114:2;;;2160:1;2157;2150:12;2114:2;2180:63;2235:7;2226:6;2215:9;2211:22;2180:63;;;2170:73;;2055:194;2308:2;2297:9;2293:18;2280:32;2332:18;2324:6;2321:30;2318:2;;;2364:1;2361;2354:12;2318:2;2384:63;2439:7;2430:6;2419:9;2415:22;2384:63;;;2374:73;;2259:194;2512:3;2501:9;2497:19;2484:33;2537:18;2529:6;2526:30;2523:2;;;2569:1;2566;2559:12;2523:2;2589:63;2644:7;2635:6;2624:9;2620:22;2589:63;;;2579:73;;2463:195;1579:1089;;;;;;;;;2675:347;;2787:39;2820:5;2787:39;;;2838:71;2902:6;2897:3;2838:71;;;2831:78;;2914:52;2959:6;2954:3;2947:4;2940:5;2936:16;2914:52;;;2987:29;3009:6;2987:29;;;2982:3;2978:39;2971:46;;2767:255;;;;;;3029:360;;3159:39;3192:5;3159:39;;;3210:89;3292:6;3287:3;3210:89;;;3203:96;;3304:52;3349:6;3344:3;3337:4;3330:5;3326:16;3304:52;;;3377:6;3372:3;3368:16;3361:23;;3139:250;;;;;;3396:266;;3542:95;3633:3;3624:6;3542:95;;;3535:102;;3654:3;3647:10;;3523:139;;;;;3669:1099;;3999:3;3988:9;3984:19;3976:27;;4050:9;4044:4;4040:20;4036:1;4025:9;4021:17;4014:47;4075:78;4148:4;4139:6;4075:78;;;4067:86;;4201:9;4195:4;4191:20;4186:2;4175:9;4171:18;4164:48;4226:78;4299:4;4290:6;4226:78;;;4218:86;;4352:9;4346:4;4342:20;4337:2;4326:9;4322:18;4315:48;4377:78;4450:4;4441:6;4377:78;;;4369:86;;4503:9;4497:4;4493:20;4488:2;4477:9;4473:18;4466:48;4528:78;4601:4;4592:6;4528:78;;;4520:86;;4655:9;4649:4;4645:20;4639:3;4628:9;4624:19;4617:49;4680:78;4753:4;4744:6;4680:78;;;4672:86;;3970:798;;;;;;;;;4775:256;;4837:2;4831:9;4821:19;;4875:4;4867:6;4863:17;4974:6;4962:10;4959:22;4938:18;4926:10;4923:34;4920:62;4917:2;;;4995:1;4992;4985:12;4917:2;5015:10;5011:2;5004:22;4815:216;;;;;5038:322;;5182:18;5174:6;5171:30;5168:2;;;5214:1;5211;5204:12;5168:2;5281:4;5277:9;5270:4;5262:6;5258:17;5254:33;5246:41;;5345:4;5339;5335:15;5327:23;;5105:255;;;;5367:122;;5461:5;5455:12;5445:22;;5426:63;;;;5497:163;;5612:6;5607:3;5600:19;5649:4;5644:3;5640:14;5625:29;;5593:67;;;;;5669:145;;5805:3;5790:18;;5783:31;;;;;5823:145;5904:6;5899:3;5894;5881:30;5960:1;5951:6;5946:3;5942:16;5935:27;5874:94;;;;5977:268;6042:1;6049:101;6063:6;6060:1;6057:13;6049:101;;;6139:1;6134:3;6130:11;6124:18;6120:1;6115:3;6111:11;6104:39;6085:2;6082:1;6078:10;6073:15;;6049:101;;;6165:6;6162:1;6159:13;6156:2;;;6230:1;6221:6;6216:3;6212:16;6205:27;6156:2;6026:219;;;;;6253:97;;6341:2;6337:7;6332:2;6325:5;6321:14;6317:28;6307:38;;6301:49;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity <= 0.8.4;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract ProductContract {\r\n    struct Product{\r\n        string product_name;\r\n        string product_id;\r\n        string company_owner;\r\n        string product_owner;\r\n        string product_detail;\r\n        }\r\n        \r\n    mapping(string=>Product)  pr;\r\n    \r\n    function getProduct(string memory id) view public returns(string memory,string memory,string memory,string memory,string memory){\r\n        \r\n        return (pr[id].product_name,pr[id].product_id,pr[id].company_owner,pr[id].product_owner,pr[id].product_detail);\r\n        \r\n    }\r\n    \r\n    function setProduct(string memory id,string memory pn,string memory co ,string memory po,string memory pd) public\r\n    {\r\n        pr[id]=Product(pn,id,co,po,pd);\r\n    }\r\n    \r\n    function setProductOwnerName(string memory id,string memory _name) public{\r\n        pr[id].product_owner=_name;\r\n    } \r\n}",
+  "sourcePath": "C:\\Users\\arya\\Desktop\\code\\Blockchain\\First\\contracts\\ProductContract.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ProductContract.sol",
+    "exportedSymbols": {
+      "ProductContract": [
+        130
+      ]
+    },
+    "id": 131,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          "<=",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:25:1"
+      },
+      {
+        "id": 35,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "62:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 130,
+        "linearizedBaseContracts": [
+          130
+        ],
+        "name": "ProductContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ProductContract.Product",
+            "id": 46,
+            "members": [
+              {
+                "constant": false,
+                "id": 37,
+                "name": "product_name",
+                "nodeType": "VariableDeclaration",
+                "scope": 46,
+                "src": "156:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 36,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "156:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 39,
+                "name": "product_id",
+                "nodeType": "VariableDeclaration",
+                "scope": 46,
+                "src": "186:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 38,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "186:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41,
+                "name": "company_owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 46,
+                "src": "214:20:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 40,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "214:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43,
+                "name": "product_owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 46,
+                "src": "245:20:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 42,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 45,
+                "name": "product_detail",
+                "nodeType": "VariableDeclaration",
+                "scope": 46,
+                "src": "276:21:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 44,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "276:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Product",
+            "nodeType": "StructDefinition",
+            "scope": 130,
+            "src": "131:178:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 50,
+            "name": "pr",
+            "nodeType": "VariableDeclaration",
+            "scope": 130,
+            "src": "325:28:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+              "typeString": "mapping(string => struct ProductContract.Product)"
+            },
+            "typeName": {
+              "id": 49,
+              "keyType": {
+                "id": 47,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "333:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "325:24:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                "typeString": "mapping(string => struct ProductContract.Product)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 48,
+                "name": "Product",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 46,
+                "src": "341:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Product_$46_storage_ptr",
+                  "typeString": "struct ProductContract.Product"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 87,
+              "nodeType": "Block",
+              "src": "494:149:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 65,
+                            "name": "pr",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 50,
+                            "src": "523:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                              "typeString": "mapping(string memory => struct ProductContract.Product storage ref)"
+                            }
+                          },
+                          "id": 67,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 66,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 52,
+                            "src": "526:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "523:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Product_$46_storage",
+                            "typeString": "struct ProductContract.Product storage ref"
+                          }
+                        },
+                        "id": 68,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "product_name",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 37,
+                        "src": "523:19:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 69,
+                            "name": "pr",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 50,
+                            "src": "543:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                              "typeString": "mapping(string memory => struct ProductContract.Product storage ref)"
+                            }
+                          },
+                          "id": 71,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 70,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 52,
+                            "src": "546:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "543:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Product_$46_storage",
+                            "typeString": "struct ProductContract.Product storage ref"
+                          }
+                        },
+                        "id": 72,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "product_id",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 39,
+                        "src": "543:17:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 73,
+                            "name": "pr",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 50,
+                            "src": "561:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                              "typeString": "mapping(string memory => struct ProductContract.Product storage ref)"
+                            }
+                          },
+                          "id": 75,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 74,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 52,
+                            "src": "564:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "561:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Product_$46_storage",
+                            "typeString": "struct ProductContract.Product storage ref"
+                          }
+                        },
+                        "id": 76,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "company_owner",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 41,
+                        "src": "561:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 77,
+                            "name": "pr",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 50,
+                            "src": "582:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                              "typeString": "mapping(string memory => struct ProductContract.Product storage ref)"
+                            }
+                          },
+                          "id": 79,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 78,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 52,
+                            "src": "585:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "582:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Product_$46_storage",
+                            "typeString": "struct ProductContract.Product storage ref"
+                          }
+                        },
+                        "id": 80,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "product_owner",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 43,
+                        "src": "582:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 81,
+                            "name": "pr",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 50,
+                            "src": "603:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                              "typeString": "mapping(string memory => struct ProductContract.Product storage ref)"
+                            }
+                          },
+                          "id": 83,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 82,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 52,
+                            "src": "606:2:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "603:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Product_$46_storage",
+                            "typeString": "struct ProductContract.Product storage ref"
+                          }
+                        },
+                        "id": 84,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "product_detail",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 45,
+                        "src": "603:21:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      }
+                    ],
+                    "id": 85,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "522:103:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_string_storage_$_t_string_storage_$_t_string_storage_$_t_string_storage_$",
+                      "typeString": "tuple(string storage ref,string storage ref,string storage ref,string storage ref,string storage ref)"
+                    }
+                  },
+                  "functionReturnParameters": 64,
+                  "id": 86,
+                  "nodeType": "Return",
+                  "src": "515:110:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 88,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProduct",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "386:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "386:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "385:18:1"
+            },
+            "returnParameters": {
+              "id": 64,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "424:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 54,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "424:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "438:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 56,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "438:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "452:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 58,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 61,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "466:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 60,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "466:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 63,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "480:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 62,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "480:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "423:71:1"
+            },
+            "scope": 130,
+            "src": "366:277:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 113,
+              "nodeType": "Block",
+              "src": "774:49:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 111,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 101,
+                        "name": "pr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50,
+                        "src": "785:2:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                          "typeString": "mapping(string memory => struct ProductContract.Product storage ref)"
+                        }
+                      },
+                      "id": 103,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 102,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 90,
+                        "src": "788:2:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "785:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Product_$46_storage",
+                        "typeString": "struct ProductContract.Product storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 105,
+                          "name": "pn",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 92,
+                          "src": "800:2:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 106,
+                          "name": "id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 90,
+                          "src": "803:2:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 107,
+                          "name": "co",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 94,
+                          "src": "806:2:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 108,
+                          "name": "po",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 96,
+                          "src": "809:2:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 109,
+                          "name": "pd",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 98,
+                          "src": "812:2:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 104,
+                        "name": "Product",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 46,
+                        "src": "792:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Product_$46_storage_ptr_$",
+                          "typeString": "type(struct ProductContract.Product storage pointer)"
+                        }
+                      },
+                      "id": 110,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "792:23:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Product_$46_memory",
+                        "typeString": "struct ProductContract.Product memory"
+                      }
+                    },
+                    "src": "785:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Product_$46_storage",
+                      "typeString": "struct ProductContract.Product storage ref"
+                    }
+                  },
+                  "id": 112,
+                  "nodeType": "ExpressionStatement",
+                  "src": "785:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 114,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setProduct",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 99,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 90,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 114,
+                  "src": "675:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 89,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "675:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 92,
+                  "name": "pn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 114,
+                  "src": "692:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "692:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "co",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 114,
+                  "src": "709:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "709:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 96,
+                  "name": "po",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 114,
+                  "src": "727:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 95,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "727:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 98,
+                  "name": "pd",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 114,
+                  "src": "744:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 97,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "744:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "674:87:1"
+            },
+            "returnParameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "774:0:1"
+            },
+            "scope": 130,
+            "src": "655:168:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 128,
+              "nodeType": "Block",
+              "src": "908:45:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 126,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 121,
+                          "name": "pr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 50,
+                          "src": "919:2:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Product_$46_storage_$",
+                            "typeString": "mapping(string memory => struct ProductContract.Product storage ref)"
+                          }
+                        },
+                        "id": 123,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 122,
+                          "name": "id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 116,
+                          "src": "922:2:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "919:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Product_$46_storage",
+                          "typeString": "struct ProductContract.Product storage ref"
+                        }
+                      },
+                      "id": 124,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "product_owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 43,
+                      "src": "919:20:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 125,
+                      "name": "_name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 118,
+                      "src": "940:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "919:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 127,
+                  "nodeType": "ExpressionStatement",
+                  "src": "919:26:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 129,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setProductOwnerName",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 119,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 116,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 129,
+                  "src": "864:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 115,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "864:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 118,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 129,
+                  "src": "881:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 117,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "881:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "863:38:1"
+            },
+            "returnParameters": {
+              "id": 120,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "908:0:1"
+            },
+            "scope": 130,
+            "src": "835:118:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 131,
+        "src": "99:858:1"
+      }
+    ],
+    "src": "35:922:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/ProductContract.sol",
+      "exportedSymbols": {
+        "ProductContract": [
+          130
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "<=",
+            "0.8",
+            ".4"
+          ]
+        },
+        "id": 34,
+        "name": "PragmaDirective",
+        "src": "35:25:1"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 35,
+        "name": "PragmaDirective",
+        "src": "62:33:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            130
+          ],
+          "name": "ProductContract",
+          "scope": 131
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "ProductContract.Product",
+              "name": "Product",
+              "scope": 130,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "product_name",
+                  "scope": 46,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 36,
+                    "name": "ElementaryTypeName",
+                    "src": "156:6:1"
+                  }
+                ],
+                "id": 37,
+                "name": "VariableDeclaration",
+                "src": "156:19:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "product_id",
+                  "scope": 46,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 38,
+                    "name": "ElementaryTypeName",
+                    "src": "186:6:1"
+                  }
+                ],
+                "id": 39,
+                "name": "VariableDeclaration",
+                "src": "186:17:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "company_owner",
+                  "scope": 46,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 40,
+                    "name": "ElementaryTypeName",
+                    "src": "214:6:1"
+                  }
+                ],
+                "id": 41,
+                "name": "VariableDeclaration",
+                "src": "214:20:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "product_owner",
+                  "scope": 46,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 42,
+                    "name": "ElementaryTypeName",
+                    "src": "245:6:1"
+                  }
+                ],
+                "id": 43,
+                "name": "VariableDeclaration",
+                "src": "245:20:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "product_detail",
+                  "scope": 46,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 44,
+                    "name": "ElementaryTypeName",
+                    "src": "276:6:1"
+                  }
+                ],
+                "id": 45,
+                "name": "VariableDeclaration",
+                "src": "276:21:1"
+              }
+            ],
+            "id": 46,
+            "name": "StructDefinition",
+            "src": "131:178:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "pr",
+              "scope": 130,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(string => struct ProductContract.Product)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(string => struct ProductContract.Product)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 47,
+                    "name": "ElementaryTypeName",
+                    "src": "333:6:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Product",
+                      "referencedDeclaration": 46,
+                      "type": "struct ProductContract.Product"
+                    },
+                    "id": 48,
+                    "name": "UserDefinedTypeName",
+                    "src": "341:7:1"
+                  }
+                ],
+                "id": 49,
+                "name": "Mapping",
+                "src": "325:24:1"
+              }
+            ],
+            "id": 50,
+            "name": "VariableDeclaration",
+            "src": "325:28:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getProduct",
+              "scope": 130,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 88,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 51,
+                        "name": "ElementaryTypeName",
+                        "src": "386:6:1"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "VariableDeclaration",
+                    "src": "386:16:1"
+                  }
+                ],
+                "id": 53,
+                "name": "ParameterList",
+                "src": "385:18:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 88,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 54,
+                        "name": "ElementaryTypeName",
+                        "src": "424:6:1"
+                      }
+                    ],
+                    "id": 55,
+                    "name": "VariableDeclaration",
+                    "src": "424:13:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 88,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 56,
+                        "name": "ElementaryTypeName",
+                        "src": "438:6:1"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "VariableDeclaration",
+                    "src": "438:13:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 88,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 58,
+                        "name": "ElementaryTypeName",
+                        "src": "452:6:1"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "VariableDeclaration",
+                    "src": "452:13:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 88,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 60,
+                        "name": "ElementaryTypeName",
+                        "src": "466:6:1"
+                      }
+                    ],
+                    "id": 61,
+                    "name": "VariableDeclaration",
+                    "src": "466:13:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 88,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 62,
+                        "name": "ElementaryTypeName",
+                        "src": "480:6:1"
+                      }
+                    ],
+                    "id": 63,
+                    "name": "VariableDeclaration",
+                    "src": "480:13:1"
+                  }
+                ],
+                "id": 64,
+                "name": "ParameterList",
+                "src": "423:71:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 64
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(string storage ref,string storage ref,string storage ref,string storage ref,string storage ref)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "product_name",
+                              "referencedDeclaration": 37,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct ProductContract.Product storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 50,
+                                      "type": "mapping(string memory => struct ProductContract.Product storage ref)",
+                                      "value": "pr"
+                                    },
+                                    "id": 65,
+                                    "name": "Identifier",
+                                    "src": "523:2:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 52,
+                                      "type": "string memory",
+                                      "value": "id"
+                                    },
+                                    "id": 66,
+                                    "name": "Identifier",
+                                    "src": "526:2:1"
+                                  }
+                                ],
+                                "id": 67,
+                                "name": "IndexAccess",
+                                "src": "523:6:1"
+                              }
+                            ],
+                            "id": 68,
+                            "name": "MemberAccess",
+                            "src": "523:19:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "product_id",
+                              "referencedDeclaration": 39,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct ProductContract.Product storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 50,
+                                      "type": "mapping(string memory => struct ProductContract.Product storage ref)",
+                                      "value": "pr"
+                                    },
+                                    "id": 69,
+                                    "name": "Identifier",
+                                    "src": "543:2:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 52,
+                                      "type": "string memory",
+                                      "value": "id"
+                                    },
+                                    "id": 70,
+                                    "name": "Identifier",
+                                    "src": "546:2:1"
+                                  }
+                                ],
+                                "id": 71,
+                                "name": "IndexAccess",
+                                "src": "543:6:1"
+                              }
+                            ],
+                            "id": 72,
+                            "name": "MemberAccess",
+                            "src": "543:17:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "company_owner",
+                              "referencedDeclaration": 41,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct ProductContract.Product storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 50,
+                                      "type": "mapping(string memory => struct ProductContract.Product storage ref)",
+                                      "value": "pr"
+                                    },
+                                    "id": 73,
+                                    "name": "Identifier",
+                                    "src": "561:2:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 52,
+                                      "type": "string memory",
+                                      "value": "id"
+                                    },
+                                    "id": 74,
+                                    "name": "Identifier",
+                                    "src": "564:2:1"
+                                  }
+                                ],
+                                "id": 75,
+                                "name": "IndexAccess",
+                                "src": "561:6:1"
+                              }
+                            ],
+                            "id": 76,
+                            "name": "MemberAccess",
+                            "src": "561:20:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "product_owner",
+                              "referencedDeclaration": 43,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct ProductContract.Product storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 50,
+                                      "type": "mapping(string memory => struct ProductContract.Product storage ref)",
+                                      "value": "pr"
+                                    },
+                                    "id": 77,
+                                    "name": "Identifier",
+                                    "src": "582:2:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 52,
+                                      "type": "string memory",
+                                      "value": "id"
+                                    },
+                                    "id": 78,
+                                    "name": "Identifier",
+                                    "src": "585:2:1"
+                                  }
+                                ],
+                                "id": 79,
+                                "name": "IndexAccess",
+                                "src": "582:6:1"
+                              }
+                            ],
+                            "id": 80,
+                            "name": "MemberAccess",
+                            "src": "582:20:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "product_detail",
+                              "referencedDeclaration": 45,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct ProductContract.Product storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 50,
+                                      "type": "mapping(string memory => struct ProductContract.Product storage ref)",
+                                      "value": "pr"
+                                    },
+                                    "id": 81,
+                                    "name": "Identifier",
+                                    "src": "603:2:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 52,
+                                      "type": "string memory",
+                                      "value": "id"
+                                    },
+                                    "id": 82,
+                                    "name": "Identifier",
+                                    "src": "606:2:1"
+                                  }
+                                ],
+                                "id": 83,
+                                "name": "IndexAccess",
+                                "src": "603:6:1"
+                              }
+                            ],
+                            "id": 84,
+                            "name": "MemberAccess",
+                            "src": "603:21:1"
+                          }
+                        ],
+                        "id": 85,
+                        "name": "TupleExpression",
+                        "src": "522:103:1"
+                      }
+                    ],
+                    "id": 86,
+                    "name": "Return",
+                    "src": "515:110:1"
+                  }
+                ],
+                "id": 87,
+                "name": "Block",
+                "src": "494:149:1"
+              }
+            ],
+            "id": 88,
+            "name": "FunctionDefinition",
+            "src": "366:277:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setProduct",
+              "scope": 130,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 114,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 89,
+                        "name": "ElementaryTypeName",
+                        "src": "675:6:1"
+                      }
+                    ],
+                    "id": 90,
+                    "name": "VariableDeclaration",
+                    "src": "675:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "pn",
+                      "scope": 114,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 91,
+                        "name": "ElementaryTypeName",
+                        "src": "692:6:1"
+                      }
+                    ],
+                    "id": 92,
+                    "name": "VariableDeclaration",
+                    "src": "692:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "co",
+                      "scope": 114,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 93,
+                        "name": "ElementaryTypeName",
+                        "src": "709:6:1"
+                      }
+                    ],
+                    "id": 94,
+                    "name": "VariableDeclaration",
+                    "src": "709:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "po",
+                      "scope": 114,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 95,
+                        "name": "ElementaryTypeName",
+                        "src": "727:6:1"
+                      }
+                    ],
+                    "id": 96,
+                    "name": "VariableDeclaration",
+                    "src": "727:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "pd",
+                      "scope": 114,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 97,
+                        "name": "ElementaryTypeName",
+                        "src": "744:6:1"
+                      }
+                    ],
+                    "id": 98,
+                    "name": "VariableDeclaration",
+                    "src": "744:16:1"
+                  }
+                ],
+                "id": 99,
+                "name": "ParameterList",
+                "src": "674:87:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 100,
+                "name": "ParameterList",
+                "src": "774:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct ProductContract.Product storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct ProductContract.Product storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 50,
+                                  "type": "mapping(string memory => struct ProductContract.Product storage ref)",
+                                  "value": "pr"
+                                },
+                                "id": 101,
+                                "name": "Identifier",
+                                "src": "785:2:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 90,
+                                  "type": "string memory",
+                                  "value": "id"
+                                },
+                                "id": 102,
+                                "name": "Identifier",
+                                "src": "788:2:1"
+                              }
+                            ],
+                            "id": 103,
+                            "name": "IndexAccess",
+                            "src": "785:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct ProductContract.Product memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 46,
+                                  "type": "type(struct ProductContract.Product storage pointer)",
+                                  "value": "Product"
+                                },
+                                "id": 104,
+                                "name": "Identifier",
+                                "src": "792:7:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 92,
+                                  "type": "string memory",
+                                  "value": "pn"
+                                },
+                                "id": 105,
+                                "name": "Identifier",
+                                "src": "800:2:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 90,
+                                  "type": "string memory",
+                                  "value": "id"
+                                },
+                                "id": 106,
+                                "name": "Identifier",
+                                "src": "803:2:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 94,
+                                  "type": "string memory",
+                                  "value": "co"
+                                },
+                                "id": 107,
+                                "name": "Identifier",
+                                "src": "806:2:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 96,
+                                  "type": "string memory",
+                                  "value": "po"
+                                },
+                                "id": 108,
+                                "name": "Identifier",
+                                "src": "809:2:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 98,
+                                  "type": "string memory",
+                                  "value": "pd"
+                                },
+                                "id": 109,
+                                "name": "Identifier",
+                                "src": "812:2:1"
+                              }
+                            ],
+                            "id": 110,
+                            "name": "FunctionCall",
+                            "src": "792:23:1"
+                          }
+                        ],
+                        "id": 111,
+                        "name": "Assignment",
+                        "src": "785:30:1"
+                      }
+                    ],
+                    "id": 112,
+                    "name": "ExpressionStatement",
+                    "src": "785:30:1"
+                  }
+                ],
+                "id": 113,
+                "name": "Block",
+                "src": "774:49:1"
+              }
+            ],
+            "id": 114,
+            "name": "FunctionDefinition",
+            "src": "655:168:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setProductOwnerName",
+              "scope": 130,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 129,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 115,
+                        "name": "ElementaryTypeName",
+                        "src": "864:6:1"
+                      }
+                    ],
+                    "id": 116,
+                    "name": "VariableDeclaration",
+                    "src": "864:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_name",
+                      "scope": 129,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 117,
+                        "name": "ElementaryTypeName",
+                        "src": "881:6:1"
+                      }
+                    ],
+                    "id": 118,
+                    "name": "VariableDeclaration",
+                    "src": "881:19:1"
+                  }
+                ],
+                "id": 119,
+                "name": "ParameterList",
+                "src": "863:38:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 120,
+                "name": "ParameterList",
+                "src": "908:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "product_owner",
+                              "referencedDeclaration": 43,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct ProductContract.Product storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 50,
+                                      "type": "mapping(string memory => struct ProductContract.Product storage ref)",
+                                      "value": "pr"
+                                    },
+                                    "id": 121,
+                                    "name": "Identifier",
+                                    "src": "919:2:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 116,
+                                      "type": "string memory",
+                                      "value": "id"
+                                    },
+                                    "id": 122,
+                                    "name": "Identifier",
+                                    "src": "922:2:1"
+                                  }
+                                ],
+                                "id": 123,
+                                "name": "IndexAccess",
+                                "src": "919:6:1"
+                              }
+                            ],
+                            "id": 124,
+                            "name": "MemberAccess",
+                            "src": "919:20:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 118,
+                              "type": "string memory",
+                              "value": "_name"
+                            },
+                            "id": 125,
+                            "name": "Identifier",
+                            "src": "940:5:1"
+                          }
+                        ],
+                        "id": 126,
+                        "name": "Assignment",
+                        "src": "919:26:1"
+                      }
+                    ],
+                    "id": 127,
+                    "name": "ExpressionStatement",
+                    "src": "919:26:1"
+                  }
+                ],
+                "id": 128,
+                "name": "Block",
+                "src": "908:45:1"
+              }
+            ],
+            "id": 129,
+            "name": "FunctionDefinition",
+            "src": "835:118:1"
+          }
+        ],
+        "id": 130,
+        "name": "ContractDefinition",
+        "src": "99:858:1"
+      }
+    ],
+    "id": 131,
+    "name": "SourceUnit",
+    "src": "35:922:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xe3bb6A9c62875C5ACE4041829381E81b40D508Dd",
+      "transactionHash": "0x24c9ae0c38fd60fe103fb53fd26c3d7d734e5d6383bee3c517361c0735f90928"
+    }
+  },
+  "schemaVersion": "3.4.2",
+  "updatedAt": "2021-08-24T06:45:22.459Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

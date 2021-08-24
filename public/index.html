@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="web3.js"></script>
+    <script type="module"src="bundle.js"></script>    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  </head>
+  <body>
+   <a href="#nav"> <button class="btn btn-primary position-fixed" style="right:8vh;bottom:8vh;z-index:111111;">TOP</button></a>
+    <nav  id='nav'class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Product Check</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Enter Product Id"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container pt-3">
+      <div class="text-center">
+        <a href='#addAProduct'><button class="btn btn-primary m-3" >Add A Prooduct</button></a>
+        <a href='#getAProduct'><button class="btn btn-primary m-3">Get A Produt</button></a>
+        <a href='#addProductOwnerName'><button class="btn btn-primary m-3">Change The Owner Name</button></a>
+      </div>
+     
+      <!-- add a product -->
+      
+      <div class="m-1 pt-5" id="addAProduct" style="height:100vh;">
+        <div class="card">
+          <h5 class="card-header">Add A Prooduct</h5>
+          <div class="card-body">
+            <h5 class="card-title">Fill All the Details..</h5>
+            <div class="form-group">
+              <label for="pn">Product Name:</label>
+              <input type="text" class="form-control" id="pn" />
+            </div>
+
+            <div class="form-group">
+              <label for="pid">Product ID:</label>
+              <input type="text" class="form-control" id="pid" />
+            </div>
+            <div class="form-group">
+              <label for="po">Company Owner</label>
+              <input type="text" class="form-control" id="co" />
+            </div>
+            <div class="form-group">
+              <label for="pd">Product Details:</label>
+              <input type="text" class="form-control" id="pd" />
+            </div>
+            <button id='add' class="btn btn-success mt-2">ADD</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- get a product -->
+      <div class="m-4  pt-5" id="getAProduct"  style="height:100vh;">
+        <div class="card">
+          <h5 class="card-header">Get A Prooduct</h5>
+          <div class="card-body">
+            
+            
+              <label for="getpid">Product Id:</label>
+              <input type="text" class="getProductID" id="getpid" />
+            
+
+            
+            <button id='get' class="btn btn-success mt-2 getProductBtn" data-bs-target="#exampleModal">Get</button>
+          </div>
+        </div>
+      </div>
+      <!-- add product owner name -->
+      
+      <div class="m-4 pt-5" id="addProductOwnerName" style="height:100vh;">
+        <div class="card">
+          <h5 class="card-header">Add Prooduct Owner Name</h5>
+          <div class="card-body">
+            <h5 class="card-title">Add name by using product id</h5>
+
+            <div class="form-group">
+              <label for="poid">Product ID:</label>
+              <input type="text" class="form-control" id="poid" />
+            </div>
+          
+            <div class="form-group">
+              <label for="pon">Product Owner Name:</label>
+              <input type="text" class="form-control" id="pon" />
+            </div>
+            <button id='addON' class="btn btn-success mt-2">Add</button>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Real OR Fake</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" id="qrcode">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
